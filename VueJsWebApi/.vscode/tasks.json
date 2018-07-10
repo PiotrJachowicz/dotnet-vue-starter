@@ -1,0 +1,19 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Web Api",
+      "type": "shell",
+      "suppressTaskName": true,
+      "isBuildCommand": true,
+      "command": "cd ${workspaceFolder}/DotnetStarter.Api; dotnet run;"
+    },
+    {
+      "label": "Run Vue",
+      "type": "shell",
+      "suppressTaskName": true,
+      "isBuildCommand": true,
+      "command": "cd ${workspaceFolder}/dotnet-starter-app; npm run dev;"
+    }
+  ]
+}
