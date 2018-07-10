@@ -1,7 +1,18 @@
 import { Observable, of } from 'rxjs';
+import http from '../common/http-common';
 
 export default class HelloWorldService {
   callWebApi() {
-    return of('hello world test');
+    return Observable.create(observer => {
+      http
+        .get('helloworld')
+        .then(response => {
+          observer.next(response.data);
+          observer.complete();
+        })
+        .catch(error => {
+          observer.error(error);
+        });
+    });
   }
 }
