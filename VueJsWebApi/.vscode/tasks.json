@@ -4,16 +4,14 @@
     {
       "label": "Run Web Api",
       "type": "shell",
-      "suppressTaskName": true,
-      "isBuildCommand": true,
+      "group": "build",
       "command": "cd ${workspaceFolder}/DotnetStarter.Api; dotnet run;"
     },
-    {
-      "label": "Run Vue",
-      "type": "shell",
-      "suppressTaskName": true,
-      "isBuildCommand": true,
-      "command": "cd ${workspaceFolder}/dotnet-starter-app; npm run dev;"
+    { 
+      "label": "Run Vue", 
+      "type": "shell", 
+      "group": "build", 
+      "command": "cd ${workspaceFolder}/dotnet-starter-app; npm run dev;" 
     }
   ]
 }
