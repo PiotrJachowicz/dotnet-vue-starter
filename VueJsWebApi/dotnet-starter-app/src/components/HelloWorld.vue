@@ -1,22 +1,27 @@
 <template>
   <div>
-    {{message}}  
-  </div>  
+    {{message}}    
+  <div>
+    <button @click="callWebApi">Call api for Hello World</button>
+  </div>
+  </div>
 </template>
 
 <script>
-import HelloWorldService from '../services/HelloWorld.service.js';
+import helloWorldService from '../services/HelloWorld.service.js';
+import store from '../store/helloWorld.store.js';
 
 export default {
   name: 'hello-world',
-  data() {
-    return {
-      message: ''
-    };
+  methods:{
+    callWebApi(){
+      helloWorldService.callWebApi().subscribe(newMessage => (store.commit('saveMessage', newMessage)));
+    }
   },
-  mounted() {
-    var helloWorldService = new HelloWorldService();
-    helloWorldService.callWebApi().subscribe(x => (this.message = x));
+  computed: {
+    message() {
+      return store.state.message;
+    }
   }
 };
 </script>
