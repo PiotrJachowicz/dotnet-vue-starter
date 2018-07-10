@@ -11,7 +11,18 @@
       "label": "Run Vue", 
       "type": "shell", 
       "group": "build", 
-      "command": "cd ${workspaceFolder}/dotnet-starter-app; npm run dev;" 
+      "command": "cd ${workspaceFolder}/dotnet-starter-app; npm run test; npm run dev;" 
+    },
+    {
+      "label": "Run Mocha tests", 
+      "type": "shell", 
+      "group": "test", 
+      "command": "cd ${workspaceFolder}/dotnet-starter-app; npm run test;" 
+    },
+    { 
+      "label": "Install dependencies", 
+      "type": "shell", 
+      "command": "cd ${workspaceFolder}/dotnet-starter-app; npm install;" 
     }
   ]
 }
