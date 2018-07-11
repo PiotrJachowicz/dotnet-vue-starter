@@ -1,17 +1,17 @@
-#Introduction
+# Introduction
 A starter, hello world template, for full-stack app, using vue.js on frontend and ASP.NET Core Web Api on backend. 
 
 Technologies used:
-    - Vue.js Cli 3
-    - Eslint Airbnb config
-    - Vuex
-    - Axios
-    - Mocha, Chai
-    - Webpack
+* Vue.js Cli 3
+* Eslint Airbnb config
+* Vuex
+* Axios
+* Mocha, Chai
+* Webpack
 
-    - ASP.NET Core 2.1
+* ASP.NET Core 2.1
 
-#Usage
+# Usage
 Run the VueJsWebApi folder as a VsCode workspace. Using Ctrl+Shift+P -> Tasks: Run Task you can run:
 1) Install Dependencies - runs npm install in the vue project, use straight after downloading the code to refresh the node_modules
 2) Run Mocha Tests - starts the frontend tests
