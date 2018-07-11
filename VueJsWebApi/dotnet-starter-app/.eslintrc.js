@@ -20,5 +20,14 @@ module.exports = {
                 ]
             }
         ]
+    },
+    "settings": {
+      "import/resolver": {
+        "alias": [
+          ["src/services", "./src/services"],
+          ["src/store", "./src/store"],
+          ["src/components", "./src/components"],
+         ]
+      }
     }
 };

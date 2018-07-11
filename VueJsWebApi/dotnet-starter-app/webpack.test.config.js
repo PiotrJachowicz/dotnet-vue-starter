@@ -22,6 +22,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.vue'],
+    modules: [
+      path.resolve('./src'),
+      path.resolve('./node_modules')
+    ],
   },
   node: {
     fs: 'empty',
